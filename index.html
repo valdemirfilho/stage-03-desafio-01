@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+
+<head>
+  <title>Stage 03 | Desafio 01</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="favicon.svg" rel="shortcut icon">
+
+  <link href="style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="page">
+    <header>
+      <h1>Mentoria</h1>
+      <p>Preencha o formulário abaixo para agendar a sua mentoria</p>
+    </header>
+
+    <form id="form" autocomplete="off">
+      <fieldset>
+        <legend>Informações pessoais</legend>
+
+        <div class="col-2">
+          <div class="input-wrapper">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" spellcheck="false" placeholder="Seu nome" minlength="2" required>
+          </div>
+          <div class="input-wrapper">
+            <label for="lastname">Sobrenome</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Sobrenome" minlength="4" required>
+          </div>
+        </div> <!-- col-2 -->
+
+        <div class="input-wrapper">
+          <label for="email">E-mail <span>(digite um e-mail válido)</span></label>
+          <input type="email" name="email" id="email" placeholder="user@email.com" required>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="password">Senha <span>(mínimo de 6 caractéres)</span></label>
+          <input type="password" name="password" id="password" minlength="6" placeholder="password" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Informações do mentor</legend>
+
+        <div class="input-wrapper">
+          <label for="mentor">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+          <input type="text" name="mentor" id="mentor" placeholder="Mentor" minlength="2">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Seus horários disponíveis</legend>
+
+        <fieldset>
+          <legend>Primeira mentoria</legend>
+
+          <div class="col-2">
+            <div class="input-wrapper">
+              <label for="first-date">Data <span class="uppercase">(dd/mm/aaaa)</span></label>
+              <input type="date" name="first-date" id="first-date" placeholder="dd/mm/aaaa" min="2022-01-02"
+                max="2023-12-31" required>
+            </div>
+
+            <div class="col-2">
+              <div class="input-wrapper">
+                <label for="first-time-begin">Das</label>
+                <input type="time" name="first-time-begin" id="first-time-begin" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="first-time-end">Até</label>
+                <input type="time" name="first-time-end" id="first-time-end" required>
+              </div>
+            </div> <!-- col-2 -->
+          </div> <!-- col-2 -->
+        </fieldset>
+
+        <fieldset>
+          <legend>Segunda mentoria</legend>
+
+          <div class="col-2">
+            <div class="input-wrapper">
+              <label for="second-date">Data <span class="uppercase">(dd/mm/aaaa)</span></label>
+              <input type="date" name="second-date" id="second-date" min="2022-01-02" max="2023-12-31" required>
+            </div>
+
+            <div class="col-2">
+              <div class="input-wrapper">
+                <label for="second-time-begin">Das</label>
+                <input type="time" name="second-time-begin" id="second-time-begin" required>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="second-time-end">Até</label>
+                <input type="time" name="second-time-end" id="second-time-end" required>
+              </div>
+            </div> <!-- col-2 -->
+          </div> <!-- col-2 -->
+        </fieldset>
+      </fieldset>
+      </fieldset>
+    </form>
+
+    <footer>
+      <button type="submit" form="form">Salvar</button>
+    </footer>
+
+  </div> <!-- #page -->
+
+</body>
+
+</html>
