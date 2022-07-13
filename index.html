@@ -65,7 +65,7 @@
             <div class="input-wrapper">
               <label for="first-date">Data <span class="uppercase">(dd/mm/aaaa)</span></label>
               <input type="date" name="first-date" id="first-date" placeholder="dd/mm/aaaa" min="2022-01-02"
-                max="2023-12-31" required data-validate>
+                max="2023-12-31" required onkeydown="return false">
             </div>
 
             <div class="col-2">
@@ -88,18 +88,18 @@
           <div class="col-2">
             <div class="input-wrapper">
               <label for="second-date">Data <span class="uppercase">(dd/mm/aaaa)</span></label>
-              <input type="date" name="second-date" id="second-date" min="2022-01-02" max="2023-12-31" required data-validate>
+              <input type="date" name="second-date" id="second-date" min="2022-01-02" max="2023-12-31" required onkeydown="return false" >
             </div>
 
             <div class="col-2">
               <div class="input-wrapper">
                 <label for="second-time-begin">Das</label>
-                <input type="time" name="second-time-begin" id="second-time-begin" required data-validate>
+                <input type="time" name="second-time-begin" id="second-time-begin" required onkeydown="return false" >
               </div>
 
               <div class="input-wrapper">
                 <label for="second-time-end">Até</label>
-                <input type="time" name="second-time-end" id="second-time-end" required data-validate>
+                <input type="time" name="second-time-end" id="second-time-end" required onkeydown="return false" >
               </div>
             </div> <!-- col-2 -->
           </div> <!-- col-2 -->
@@ -113,6 +113,21 @@
     </footer>
 
   </div> <!-- #page -->
+  <script>
+    const dates = document.querySelectorAll("[type='date']")
+    dates.forEach(date => {
+      // date.valueAsDate = new Date();
+      date.addEventListener('focus', (e) => e.target.showPicker())
+      date.addEventListener('click', (e) => e.target.showPicker())
+    })
+
+    const times = document.querySelectorAll("[type='time']")
+    times.forEach(time => {
+      time.addEventListener('focus', (e) => e.target.showPicker())
+      time.addEventListener('click', (e) => e.target.showPicker())
+    })
+  
+    </script>
 
 </body>
 

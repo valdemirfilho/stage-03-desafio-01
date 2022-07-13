@@ -135,29 +135,32 @@ fieldset fieldset legend {
 /*   outline: 2px solid brown; */
 /* } */
 
-input:focus:not(:placeholder-shown):invalid,
-input:required:focus:not(:placeholder-shown):invalid {
+input:focus-visible:not(:placeholder-shown):invalid,
+input:required:focus-visible:not(:placeholder-shown):invalid {
   outline: none;
   color: red;
   border: 2px solid red;
 }
 
-input:required:not(:placeholder-shown):invalid:not([data-validate]) {
+input:not(:placeholder-shown):invalid:not([type="date"]):not([type="time"]) {
   outline: none;
   color: red;
   border: 2px solid red;
 }
+
+input[type="date"]:focus, 
+input[type="time"]:focus {
+  outline: none;
+  color: black !important;
+  border: 2px solid black !important;
+  user-select: none;
+} 
 
 input:not(:placeholder-shown):valid {
   outline: none;
   color: green;
   border-color: green;
 }
-
-/* input[type="date"]:not(.has-value):before{ */
-/*   color: lightgray; */
-/*   content: attr(placeholder); */
-/* } */
 
 /* input:required:not(:placeholder-shown):invalid  { */
 /*   outline: 2px solid red; */
