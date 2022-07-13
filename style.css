@@ -135,8 +135,14 @@ fieldset fieldset legend {
 /*   outline: 2px solid brown; */
 /* } */
 
-input:focus:not(:placeholder-shown):invalid ,
+input:focus:not(:placeholder-shown):invalid,
 input:required:focus:not(:placeholder-shown):invalid {
+  outline: none;
+  color: red;
+  border: 2px solid red;
+}
+
+input:required:not(:placeholder-shown):invalid:not([data-validate]) {
   outline: none;
   color: red;
   border: 2px solid red;
